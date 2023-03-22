@@ -1,0 +1,261 @@
+
+// home page( index.html)
+
+.head{
+    height: auto;
+    background-color: $background_head;
+       & .titre1{
+        text-align: center;
+        font-family: $font_heading;
+        font-size: 2.2rem;
+        padding: 3rem 2rem 2rem 1.5rem;
+        margin:0px ;
+    } 
+    
+    & .navBar img{
+      width: 12rem;
+    }
+    
+       & p{
+       text-align: center;
+       font-size: 1.5rem;
+       font-family: $font_heading;
+       padding: 0px 1rem 0px 1rem;
+    
+       }
+    
+       & .btn{
+        display: flex;
+        justify-content: center;
+        flex: 1 1 ;
+        padding: 4rem;
+    }
+    
+       & .btn_link{
+        text-decoration: none;
+        list-style-type: none;
+        padding: 1.2rem;
+        font-size: 1.2rem;
+        color: white;
+        background-image: linear-gradient(to bottom right, $secondary, $primary);
+        border-radius: 50px;
+        box-shadow:$boxShadow;
+    
+       }
+    }
+    .navBar{
+        display: flex;
+        justify-content: center;
+        padding: 2.5rem 7rem ;
+        
+        
+        & img{
+            width: 1rem;
+            flex-grow: 1;
+            font-family: $font-familly_logo;
+        }
+    }
+    .search{
+        display: flex;
+        justify-content: center;
+        padding: 1rem 3rem;
+        flex-grow: 1;
+        background-color: $background;
+        box-shadow: inset 0px 2px 5px rgb(160, 160, 160);
+        & p{
+            font-size: 2rem;
+            padding: 0px;
+            flex-grow: 1;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        & i{
+            
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+         
+        }
+    
+    }
+    .fonctionnement h1{
+        margin: 2rem 0 0 0;
+        padding: 2.5rem;
+        font-family: $font_heading;
+    }
+    .card_choice_container{
+        display: flex;
+        flex-direction: column; 
+        row-gap: 2rem;
+        align-items: center;
+        justify-content: center;
+    
+        padding: 1rem 0 5rem 0;
+        
+    }
+    
+    .card_choix{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        width: 85%;
+        padding: 2rem;
+        background-color: $background_head;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 2.5rem;
+        justify-content: center;
+        column-gap: 3rem;
+        font-family: $font_heading;
+    
+        & > p{
+            position: absolute;
+            top: 1.9rem;
+            left: -0.5rem;
+            padding: 0.2rem 0.5rem;
+            background-color: $primary;
+            border-radius: 100%;
+            flex: 1 1;
+            
+        }
+    
+        & > i{
+            display: flex;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+            color: gray;
+        
+        }
+    
+        &:hover{
+            background-color: lighten($color: $primary, $amount: 35%);
+            cursor: pointer; 
+        }
+    
+    }
+    
+    .card_choix:hover i{
+        color:$primary;
+        
+    }
+    
+    #Restaurants {
+        background-color: $background_head;
+        padding: 2rem 0 7rem 0;
+        height: auto;
+        font-family: $font_heading;
+        & h1{
+            padding-left: 2rem;
+        }
+    
+    }
+    .card--Restaurants{
+        display: flex;
+        flex-direction: column;
+        gap:2rem;
+        flex: 1 1;
+        align-items: center;
+        & .card--Restaurants__menu{
+            position: relative;
+            background-color: $neutral;
+            width: 85%;
+            height: 18.75rem;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 1rem;
+            & img{
+                width: 100%;
+                height: 70%;
+                object-fit: cover;
+                border-radius: 1rem 1rem 0 0;
+            }
+            & .desc{
+              padding:1rem ;
+              line-height: $lineHeight;
+              font-family: $font_heading;
+            }
+    
+            & .desc p{
+                font-size: 1.1rem;
+            }
+             .content{
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                padding: 0.4rem 0.9rem;
+                background-color: $tertiaire;
+                border-radius: 0.3rem;
+                color: rgb(6, 124, 89);
+                font-family: $font_heading;
+                font-weight: map-get($font-weights, bold );
+                font-size: 0.9rem;
+             }
+    
+             & i{
+                position: absolute;
+                right: 1rem;
+                bottom: 3rem;
+                
+            }
+        }
+        .theme-heart:hover{
+            color: blue;
+               
+           }
+    
+    
+    }
+    
+    .pied_de_page{
+        height: auto;
+        background-color:rgb(48, 45, 45) ;
+        color: white;
+        padding-bottom: 2rem;
+        margin-bottom: 5rem;
+        & h1{
+            font-family: $font-familly_logo;
+            padding: 2rem;
+            font-size: 1.5rem;
+            font-weight: map-get($font-weights,meduim);
+            margin-top: 0;
+            color: $neutral;
+    
+        }
+        & a{
+            text-decoration: none;
+        }
+        & .links{
+            display: flex;
+            flex-direction: column;
+            row-gap: 0.8rem;
+            padding-left: 2rem;
+            font-size: 1.3rem;
+           & a{
+            text-decoration: none;
+            color: $neutral;
+       
+           }
+    
+            & .special{
+                display: flex;
+                flex-direction: row;
+                justify-content:flex-start;
+                column-gap: 1rem;
+                & a{
+                    text-decoration: none;
+                    color: $neutral;
+                }
+            }
+        }
+    }
+    
+    .fa-utensils{
+        width: 2rem;
+    }
+    .fa-handshake-angle{
+        width: 2rem;
+    }
+    
+    

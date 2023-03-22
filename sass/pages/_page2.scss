@@ -1,0 +1,273 @@
+/*   page 2,3,4 et 5 (index2,3,4,5.html)*/
+
+
+
+.head{
+    height: auto;
+    position: relative;
+    .navBar2{
+        @extend %nav;
+        
+     
+        & .imagge{
+        flex: 1; 
+        text-align: center;
+        }
+        & img{
+            width: 12rem;
+        }
+        & i{
+          margin-left: 4rem;
+          color: black;
+        }
+    }
+
+    & .card-restaurant{
+        width: 100%;
+        height: 25.75rem ;
+        & img{
+            width: 100%;
+            height: 120%;
+            object-fit: cover;
+            object-position: center;
+
+        }
+    }
+}
+
+
+
+.main{
+    position: relative;
+    border-bottom: 2px solid black;
+    height: auto;
+    width: 100%;
+    background-color: $background;
+    border-radius: 3rem 3rem 0 0;
+    z-index: 1;
+    padding: 3rem 1.5rem 3rem 2rem;
+    
+  
+
+    & .heading{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        & h1{
+            font-family: $font-familly_logo;
+            text-transform: capitalize;
+            margin: 0 0;
+            flex-grow: 1;
+        }   
+        & i{
+            margin: 1rem 1.5rem 0 0;
+            
+        }
+    }
+    & .menu{
+            .btn i.fa-circle-check{
+            @extend %icon;
+            }
+            .btn1 i.fa-circle-check{
+                @extend %icon;
+            }
+            .btn2 i.fa-circle-check{
+                @extend %icon;
+            }
+            .btn3 i.fa-circle-check{
+                @extend %icon;
+            }
+                position: relative;
+               padding: 2rem   0;
+               display: flex;
+               flex-direction: column;
+               row-gap: 1rem;
+         & > div.cardOne{
+                @extend %card;
+                animation: apparition 0.6s 0.2s ease-out forwards;
+                &:hover ~ .btn {
+                  opacity: 1;
+                  transform: scaleX(1) ;  
+                }
+                &:hover ~ .btn i.fa-circle-check{
+                  transform:  rotate(360deg);
+                }
+                &:hover{
+                  @extend %cardHovering;
+                }
+                & div p, h3{
+                   @extend %overflowText;
+                }
+                & .prix{
+                @extend %prix;
+                }
+            }
+            & > div.cardTwo{
+                @extend %card;
+
+                animation: apparition 0.6s 0.4s ease-out forwards;
+                &:hover ~ .btn1{
+                  opacity: 1;
+                  transform: scaleX(1) ;  
+                }
+                &:hover ~ .btn1 i.fa-circle-check{
+                  transform:  rotate(360deg);
+                }
+                &:hover{
+                  @extend %cardHovering;
+                }
+                & div p, h3{
+                   @extend %overflowText;
+                }
+                & .prix{
+                @extend %prix;
+                }
+            }
+            & > div.cardThree{
+                @extend %card;
+
+                animation: apparition 0.6s 0.6s ease-out forwards;
+                &:hover ~ .btn2{
+                    opacity: 1;
+                  transform: scaleX(1) ;  
+                }
+                &:hover ~ .btn2 i.fa-circle-check{
+                  transform:  rotate(360deg);
+                }
+                &:hover{
+                  @extend %cardHovering;
+                }
+                & div p, h3{
+                   @extend %overflowText;
+                }
+                & .prix{
+                @extend %prix;
+                }
+            }
+            & > div.cardFour{
+                @extend %card;
+
+                animation: apparition 0.6s 0.8s ease-out forwards;
+                &:hover ~ .btn3{
+                    opacity: 1;
+                  transform: scaleX(1) ;  
+                }
+                &:hover ~ .btn3 i.fa-circle-check{
+                  transform:  rotate(360deg);
+                }
+                &:hover{
+                  @extend %cardHovering;
+                }
+                & div p, h3{
+                   @extend %overflowText;
+                }
+                & .prix{
+                @extend %prix;
+                }
+            }
+        
+        & .btn{
+            @extend %btnscan;
+            top: 4.65rem;
+        }
+        & .btn1{
+            @extend %btnscan;
+             top:10.62rem;
+        }
+        & .btn2{
+            @extend %btnscan;
+            top:16.62rem;
+        }
+        & .btn3{
+            @extend %btnscan;
+            top:22.57rem;
+        }
+        & .section_menu{
+            padding-bottom: 0.3rem;
+            text-transform: uppercase;
+            width: 2.5rem;
+            border-bottom: 3px solid $tertiaire;
+        }
+        
+    }
+
+    & .btn{
+        display: flex;
+        justify-content: center;
+        flex: 1 1 ;
+        padding: 2.5rem;
+    }
+    & .btn_link{
+        text-decoration: none;
+        list-style-type: none;
+        padding: 1.2rem 4rem ;
+        font-size: 1.2rem;
+        color: white;
+        background-image: linear-gradient(to bottom right, $secondary, $primary);
+        border-radius: 50px;
+        box-shadow:$boxShadow;
+    
+       }
+
+}
+@keyframes apparition {
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+    
+.pied_de_page{
+  
+    height: auto;
+    background-color:rgb(48, 45, 45) ;
+    color: white;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+   
+    & h1{
+        font-family: $font-familly_logo;
+        padding: 2rem;
+        font-size: 1.5rem;
+        font-weight: map-get($font-weights,meduim);
+        color: $neutral;
+
+    }
+    & a{
+        text-decoration: none;
+    }
+    & .links{
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.8rem;
+        padding-left: 2rem;
+        font-size: 1.3rem;
+       & a{
+        font-family: $font_heading;
+        text-decoration: none;
+        color: $neutral;
+   
+       }
+
+        & .special{
+            display: flex;
+            flex-direction: row;
+            justify-content:flex-start;
+            column-gap: 1rem;
+            & a{
+                text-decoration: none;
+                color: $neutral;
+            }
+        }
+    }
+}
+
+.fa-utensils{
+    width: 2rem;
+}
+.fa-handshake-angle{
+    width: 2rem;
+}
+
