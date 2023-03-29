@@ -1,5 +1,5 @@
 
-// home page( index.html)
+
 
 .head{
     height: auto;
@@ -11,14 +11,14 @@
         padding: 3rem 2rem 2rem 1.5rem;
         margin:0px ;
     } 
-    
+    // home page( index.html)
     & .navBar img{
       width: 12rem;
     }
     
-       & p{
+       & p,h1{
        text-align: center;
-       font-size: 1.5rem;
+       font-size: 1rem;
        font-family: $font_heading;
        padding: 0px 1rem 0px 1rem;
     
@@ -28,7 +28,7 @@
         display: flex;
         justify-content: center;
         flex: 1 1 ;
-        padding: 4rem;
+        padding: 2rem;
     }
     
        & .btn_link{
@@ -104,7 +104,7 @@
         width: 85%;
         padding: 2rem;
         background-color: $background_head;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: $boxShadow;
         border-radius: 2.5rem;
         justify-content: center;
         column-gap: 3rem;
@@ -145,10 +145,11 @@
     #Restaurants {
         background-color: $background_head;
         padding: 2rem 0 7rem 0;
+        width: 100%;
         height: auto;
         font-family: $font_heading;
         & h1{
-            padding-left: 2rem;
+            padding-left: 2.5rem;
         }
     
     }
@@ -257,5 +258,176 @@
     .fa-handshake-angle{
         width: 2rem;
     }
+
+    //responsive 
+  
+    @media screen and (min-width:768px) and (max-width:980px) {
+        .card_choice_container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            column-gap: 1.5rem;
+            margin: 0 1rem 0 1rem;
+        }
+        .card_choix{
+             column-gap: 2rem;
+             padding-right: 1.7rem;
+
+            & p{
+                top: 2.5rem;
+            }
+           
+        }
+        .card--Restaurants{
+            width: 95%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap; 
+            justify-content: center;
+            & .card--Restaurants__menu{
+                width: 40%;
+                flex-grow: 1 ;
+            }   
+        }
+       
+        #Restaurants {
+            & h1{
+                padding-left: 1.2rem;
+            }
+        }
+        .pied_de_page{
+            & > a h1{
+                text-align: center;
+            }
+            & > div.links{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+        }
+      
+    }
+
+    @media screen and (min-width:980px) and ( max-width:1064px) {
+        .card_choice_container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            column-gap: 1.5rem;
+            margin: 0 1rem 0 1rem;
+            & div:nth-of-type(2){
+                padding-right: 2.5rem;
+            }
+        }
+        .card_choix{
+             column-gap: 3.2rem;
+             padding-right: 1.5rem;
+
+            & p{
+                top: 2.5rem;
+            }
+        }
+
+        .card--Restaurants{
+            width: 95%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap; 
+            justify-content: center;
+            & .card--Restaurants__menu{
+                width: 40%;
+                flex-grow: 1 ;
+            }   
+        }
+       
+        #Restaurants {
+            & h1{
+                padding-left: 1.2rem;
+            }
+        }
+        .pied_de_page{
+           & > a h1{
+                text-align: center;
+            } 
+            & > div.links{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+        }
+    }
+    @media screen and (min-width:1064px) {
+        body{
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        .card_choice_container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            column-gap: 1.5rem;
+            margin: 0rem 5rem;
+            & div:nth-of-type(2){
+                padding-right: 2rem;
+            }
+            & div:nth-of-type(1){
+                padding-right: 0rem;
+                column-gap: 1.7rem;
+            }
+            & div:nth-of-type(3){
+                padding-right: .5rem;
+            }
+        }
+        .card_choix{
+            column-gap: 1.8rem;
+            & p{
+                top:2rem;
+            }
+        }
+        .card--Restaurants{
+            width: 90%;
+            margin:0 auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;    
+        }
+        .card--Restaurants__menu{
+            width: 30%;
+            padding-bottom: 0;
+        }
+        #Restaurants {
+            padding-bottom: 4rem;
+            & h1{
+                padding-left: 4.5rem;
+
+            }
+        }
+
+        .pied_de_page{
+            padding-top: 2rem;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            & > a h1{
+                margin-bottom: 0;
+                padding: 0rem 3rem 0 6rem;
+            }
+            & > div.links{
+                padding-left: 2rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                column-gap: 3rem;
+            }
+            & > a h1{
+                text-align: center;
+            }
+           
+    }
+  
+
     
-    
+}  

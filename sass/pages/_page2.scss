@@ -39,7 +39,6 @@
 
 .main{
     position: relative;
-    border-bottom: 2px solid black;
     height: auto;
     width: 100%;
     background-color: $background;
@@ -271,3 +270,45 @@
     width: 2rem;
 }
 
+// responsive
+
+@media screen and (min-width:768px) {
+
+    body{
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .main{
+       width: 80%;
+       margin: 0 auto;
+    }
+    
+}
+@media screen and (min-width:1100px) {
+
+    .pied_de_page{
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        & > a h1{
+            margin-bottom: 0;
+            padding: 0rem 3rem 0 6rem;
+        }
+        & > div.links{
+            padding-left: 2rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            column-gap: 3rem;
+        }
+        & > a h1{
+            text-align: center;
+        }
+       
+}
+
+    
+}

@@ -16,15 +16,15 @@
   opacity: 0;
   right: 0;
   position: absolute;
-  width: 8rem;
+  width: 29%;
   transform: scaleX(0) ;
-  height: 5.03rem;
+  height: 5.0rem;
   color: $neutral;
   background-color: $tertiaire;
   display:flex;
   justify-content: center;
   align-items: center;
-
+  box-shadow: $boxShadow;
 }
 %icon{
   transform: rotate(-360deg);
