@@ -472,10 +472,12 @@ body {
     text-align: center;
   }
 }
-/*   page 2,3,4 et 5 (index2,3,4,5.html)*/
 .head {
   height: auto;
   position: relative;
+}
+.head .navBar2 {
+  /*   page 2,3,4 et 5 (index2,3,4,5.html)*/
 }
 .head .navBar2 .imagge {
   flex: 1;
